@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CButton />
+    <CButton @alert='alertMessage'></CButton>
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'ButtonView',
   components: {
     CButton
+  },
+  methods: {
+    alertMessage() {
+      window.alert('これはテストです！')
+    }
   }
 }
 </script>
