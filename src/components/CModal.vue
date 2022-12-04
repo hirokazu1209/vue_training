@@ -1,24 +1,46 @@
 <template>
-  <div id="overlay">
-    <div id="modal-content">
-      <p>これがモーダルウィンドウです！</p>
+  <div>
+    <CModalButton @modal="modalOpen" />
+    <div id="overlay" v-show="isModalActive">
+      <div id="modal-content">
+        <p>これがモーダルウィンドウです！</p>
+        <!-- TODO:isModalActiveの変数化 -->
+        <a class="modal-close" @click="(isModalActive = false)">モーダルを閉じる</a>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import CModalButton from '@/components/CModalButton.vue'
+
+export default {
+  components: {
+    CModalButton
+  },
+  data() {
+    return {
+      isModalActive: false,
+    }
+  },
+  methods: {
+    modalOpen() {
+      this.isModalActive = true
+    }
+  }
+}
 
 </script>
 
 <style>
-#modal-content{
+#modal-content {
   z-index:10;
   width:50%;
   padding: 10em;
   background:#fff;
   border-radius: 20px;
 }
-#overlay{
+#overlay {
   /*要素を重ねた時の順番*/
   z-index:1;
 
@@ -34,9 +56,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .p {
-    padding: -20px;
-  }
+}
+.modal-close {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px;
+  background: #F15B55;
+  color: #FFF;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
 }
 </style>
