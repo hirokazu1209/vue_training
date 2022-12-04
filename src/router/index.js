@@ -14,6 +14,11 @@ const routes = [
     path: '/button',
     name: 'button',
     component: () => import('../views/ButtonView.vue')
+  },
+  {
+    path: '/modal',
+    name: 'modal',
+    component: () => import('../views/ModalView.vue')
   }
 ]
 
