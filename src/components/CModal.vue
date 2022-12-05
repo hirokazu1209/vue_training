@@ -1,11 +1,11 @@
 <template>
   <div>
     <CModalButton @modal="modalOpen" />
-    <div id="overlay" v-show="isModalActive">
+    <div id="overlay" v-show="isModalActive" @click.self="$emit(isModalActive = false)">
       <div id="modal-content">
         <p>これがモーダルウィンドウです！</p>
         <!-- TODO:isModalActiveの変数化 -->
-        <a class="modal-close" @click="(isModalActive = false)">モーダルを閉じる</a>
+        <button class="modal-close" @click="(isModalActive = false)">モーダルを閉じる</button>
       </div>
     </div>
   </div>
@@ -67,5 +67,6 @@ export default {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   cursor: pointer;
+  border: none;
 }
 </style>
