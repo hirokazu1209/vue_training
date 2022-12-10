@@ -19,6 +19,11 @@ const routes = [
     path: '/modal',
     name: 'modal',
     component: () => import('../views/ModalView.vue')
+  },
+  {
+    path: '/form',
+    name: 'form',
+    component: () => import('../views/FormView.vue')
   }
 ]
 

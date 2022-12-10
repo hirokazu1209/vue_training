@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/button">Button</router-link> |
       <router-link to="/modal">Modal</router-link> |
+      <router-link to="/form">Form</router-link>
     </nav>
     <router-view/>
   </div>
