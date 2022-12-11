@@ -15,6 +15,13 @@
       <input type="checkbox" v-model="checkBox" value="日本">
       <p>{{ checkBox }}</p>
     </div>
+
+    <div class=“form-input”>
+      <input type=“radio” v-model="radioValue" value=“フランス“>
+      <input type=“radio” v-model="radioValue" value=“モロッコ“>
+      <input type=“radio” v-model="radioValue" value=“イングランド“>
+      <p>{{ radioValue }}</p>
+    </div>
   </div>
 </template>
 
@@ -25,6 +32,7 @@
         textInput: '',
         textAreaInput: '',
         checkBox: [],
+        radioValue: 'フランス'
       };
     }
   }
