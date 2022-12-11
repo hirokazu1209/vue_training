@@ -8,6 +8,13 @@
       <textarea v-model="textAreaInput"></textarea>
       <p>{{ textAreaInput }}</p>
     </div>
+
+    <div class="form-input">
+      <input type="checkbox" v-model="checkBox" value="スペイン">
+      <input type="checkbox" v-model="checkBox" value="ドイツ">
+      <input type="checkbox" v-model="checkBox" value="日本">
+      <p>{{ checkBox }}</p>
+    </div>
   </div>
 </template>
 
@@ -16,7 +23,8 @@
     data: function() {
       return {
         textInput: '',
-        textAreaInput: ''
+        textAreaInput: '',
+        checkBox: [],
       };
     }
   }
