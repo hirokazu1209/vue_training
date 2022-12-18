@@ -17,9 +17,9 @@
     </div>
 
     <div class=“form-input”>
-      <input type=“radio” v-model="radioValue" value=“フランス“>
-      <input type=“radio” v-model="radioValue" value=“モロッコ“>
-      <input type=“radio” v-model="radioValue" value=“イングランド“>
+      <input type="radio" v-model="radioValue" value="フランス">フランス
+      <input type="radio" v-model="radioValue" value="モロッコ">モロッコ
+      <input type="radio" v-model="radioValue" value="イングランド">イングランド
       <p>{{ radioValue }}</p>
     </div>
   </div>
